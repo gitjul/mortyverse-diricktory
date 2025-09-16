@@ -1,11 +1,12 @@
 import {
-  createRouter,
   createRootRoute,
+  createRoute,
+  createRouter,
   Outlet,
   RouterProvider,
-  createRoute,
 } from "@tanstack/react-router";
 
+import { Characters } from "./components/characters";
 import QueryProvider from "./providers/query-provider";
 
 const rootRoute = createRootRoute({
@@ -20,7 +21,7 @@ const rootRoute = createRootRoute({
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/",
-  component: () => <div>Hello World</div>,
+  component: () => <Characters />,
 });
 
 const routeTree = rootRoute.addChildren([indexRoute]);
