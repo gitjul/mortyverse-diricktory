@@ -6,12 +6,14 @@ import {
   createRoute,
 } from "@tanstack/react-router";
 
+import QueryProvider from "./providers/query-provider";
+
 const rootRoute = createRootRoute({
   component: () => (
-    <>
+    <QueryProvider>
       <header>Header</header>
       <Outlet />
-    </>
+    </QueryProvider>
   ),
 });
 
