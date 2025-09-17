@@ -12,7 +12,14 @@ import QueryProvider from "./providers/query-provider";
 const rootRoute = createRootRoute({
   component: () => (
     <QueryProvider>
-      <header>Header</header>
+      <header className="container mx-auto">
+        <img
+          src="/logo.svg"
+          alt="Mortyverse Diricktory Logo"
+          className="inline h-10"
+        />
+        Mortyverse Diricktory
+      </header>
       <Outlet />
     </QueryProvider>
   ),
