@@ -13,9 +13,13 @@ export const Characters = () => {
   }
 
   return (
-    <div>
-      <h1>Characters</h1>
-      {data && <CharactersTable data={data.results} />}
-    </div>
+    <>
+      <h1 className="text-center text-3xl font-bold py-4 font-mono">
+        Rick & Morty Characters
+      </h1>
+      <main className="container mx-auto py-4">
+        {data && <CharactersTable data={data.results} />}
+      </main>
+    </>
   );
 };
