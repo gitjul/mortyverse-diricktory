@@ -36,7 +36,7 @@ const CharactersTable = ({ data }: CharactersTableProps) => {
         {table.getHeaderGroups().map((headerGroup) => (
           <TableRow key={headerGroup.id}>
             {headerGroup.headers.map((header) => (
-              <TableHead>
+              <TableHead key={header.id}>
                 {flexRender(
                   header.column.columnDef.header,
                   header.getContext()
